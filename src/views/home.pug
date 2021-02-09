@@ -1,0 +1,9 @@
+extends templates/layout
+
+block content 
+    if data 
+        h1=data
+    form(action="/", method="post" enctype="multipart/form-data")
+        input(type="file" name="textFile")
+        input(type="submit", value="Convert!")
+
